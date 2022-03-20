@@ -47,6 +47,11 @@ class ViewController: UIViewController {
         return dat
     }()
     
+    let label: UILabel = {
+        let lab = UILabel()
+        lab.text = "AA"
+    }()
+    
     
     let ImagePicker = UIImagePickerController()
     
@@ -59,6 +64,7 @@ class ViewController: UIViewController {
         view.addSubview(descriptiontext)
         view.addSubview(emailtext)
         view.addSubview(date)
+        view.addSubview(label)
         setupLayout()
         
         
