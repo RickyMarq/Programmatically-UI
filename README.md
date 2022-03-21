@@ -11,9 +11,6 @@
   
   </h1>
 
-
----
-
 ### Links 
 
 There's not any course or solid material for learning how to make UI programmatically, so i gonna share some links that are helping me.
