@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SkyFloatingLabelTextField
+import LGButton
 
 class ViewController: UIViewController {
 
@@ -17,55 +19,57 @@ class ViewController: UIViewController {
         return imageView
     }()
 
-    let descriptiontext: UILabel = {
+    let WelcomeText: UILabel = {
         let textfield = UILabel()
         textfield.text = "Welcome to Acoustic"
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.font = UIFont.boldSystemFont(ofSize: 18)
-       // textfield.isEditable = false
-       //textfield.isScrollEnabled = false
         textfield.textAlignment = .center
         return textfield
     }()
     
-    let emailtext: UITextField = {
-        let email = UITextField()
-        email.layer.cornerRadius = 12
-        email.layer.borderWidth = 1
-        email.backgroundColor = .darkGray
-        email.placeholder = "Email..."
-        email.keyboardType = .emailAddress
-        email.frame = CGRect(x: 100, y: 270, width: 200, height: 50)
-        return email
+    let MailField: SkyFloatingLabelTextFieldWithIcon = {
+        let mailFrame = CGRect(x: 60, y: 300, width: 250, height: 50)
+        let MailImage = UIImage(named: "Mail")
+        let mail = SkyFloatingLabelTextFieldWithIcon(frame: mailFrame, iconType: .image)
+        mail.placeholder = "E-mail"
+        mail.iconImage = MailImage
+        return mail
     }()
     
-    // PICKERS
-     
-    let date: UIDatePicker = {
-        let dat = UIDatePicker()
-        dat.frame = CGRect(x: 10, y: 400, width: 300, height: 300)
-        return dat
+    let PasswordField: SkyFloatingLabelTextFieldWithIcon = {
+       let password = SkyFloatingLabelTextFieldWithIcon()
+        password.placeholder = "Senha"
+        password.title = "Insira sua senha..."
+        return password
     }()
     
-    let label: UILabel = {
-        let lab = UILabel()
-        lab.text = "AA"
+    let LogginButton: LGButton = {
+        let logginbutton = LGButton()
+        logginbutton.titleString = "Login"
+        logginbutton.titleFontSize = 24
+        logginbutton.fullyRoundedCorners = true
+        //logginbutton.bgColor = .orange
+        logginbutton.gradientStartColor = .orange
+        logginbutton.gradientEndColor = .red
+        logginbutton.gradientHorizontal = true
+    
+        logginbutton.frame = CGRect(x: 50, y: 400, width: 250, height: 50)
+        return logginbutton
     }()
-    
-    
-    let ImagePicker = UIImagePickerController()
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = .systemGray
+        view.backgroundColor = .systemBackground
         view.addSubview(imageView)
-        view.addSubview(descriptiontext)
-        view.addSubview(emailtext)
-        view.addSubview(date)
-        view.addSubview(label)
+        view.addSubview(WelcomeText)
+        view.addSubview(MailField)
+        view.addSubview(LogginButton)
         setupLayout()
+        
+        
         
         
     }
@@ -75,24 +79,27 @@ class ViewController: UIViewController {
     private func setupLayout() {
         let topimageContainerView = UIView()
         topimageContainerView.backgroundColor = .systemGray
-        view.addSubview(topimageContainerView)
         topimageContainerView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         topimageContainerView.translatesAutoresizingMaskIntoConstraints = false
         
-        // Constrains:
+        // Constrains: ImageView
         imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        imageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        imageView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        
+        //imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        //imageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        //imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
         
         
         
         //
-        descriptiontext.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 0).isActive  = true
-        descriptiontext.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        descriptiontext.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        descriptiontext.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        WelcomeText.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 0).isActive  = true
+        WelcomeText.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        WelcomeText.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        WelcomeText.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         
     }
     
