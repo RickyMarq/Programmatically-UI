@@ -15,8 +15,8 @@
 
 ### Images 
 
-  <img alt="png" src="./Github/github1.PNG" height="500" />
-
+  <img alt="png" src="./Github/github1.PNG" height="500"/>
+  <img alt="gif" src="./Github/git.gif" height="500"/>
 
 ### Links 
 
