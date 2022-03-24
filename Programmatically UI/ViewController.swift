@@ -69,7 +69,9 @@ class ViewController: UIViewController {
         logginbutton.gradientStartColor = .orange
         logginbutton.gradientEndColor = .red
         logginbutton.gradientHorizontal = true
-      //  logginbutton.frame = CGRect(x: 50, y: 400, width: 300, height: 50)
+        logginbutton.shadowColor = .orange
+        logginbutton.shadowRadius = 5
+        logginbutton.shadowOpacity = 1
         return logginbutton
         
     }()
@@ -86,19 +88,63 @@ class ViewController: UIViewController {
     lazy var GoogleButton: LGButton = {
         let GoogleButton = LGButton()
         let GoogleImage = UIImage(named: "google")
-        GoogleButton.frame = CGRect(x: 50, y: 550, width: 50, height: 50)
+        GoogleButton.translatesAutoresizingMaskIntoConstraints = false
         GoogleButton.rightImageSrc = GoogleImage
+        
         GoogleButton.rightIconColor = .orange
         GoogleButton.fullyRoundedCorners = true
+        GoogleButton.rightImageHeight = 30
+        GoogleButton.rightImageWidth = 30
         GoogleButton.bgColor = .white
-   //     GoogleButton.gradientStartColor = .orange
-   //     GoogleButton.gradientEndColor = .red
-   //     GoogleButton.gradientHorizontal = true
-        GoogleButton.rightImageColor = .gray
+        GoogleButton.rightImageColor = .orange
         GoogleButton.shadowRadius = 5
         GoogleButton.shadowColor = .systemOrange
         GoogleButton.shadowOpacity = 1
         return GoogleButton
+    }()
+    
+    lazy var TwitterButton: LGButton = {
+        let TwitterButton = LGButton()
+        let TwitterImage = UIImage(named: "twitter")
+        TwitterButton.translatesAutoresizingMaskIntoConstraints = false
+        TwitterButton.rightImageSrc = TwitterImage
+        TwitterButton.rightIconColor = .orange
+        TwitterButton.fullyRoundedCorners = true
+        TwitterButton.rightImageHeight = 100
+        TwitterButton.rightImageWidth = 100
+        TwitterButton.bgColor = .white
+        TwitterButton.rightImageColor = .orange
+        TwitterButton.shadowRadius = 5
+        TwitterButton.shadowColor = .systemOrange
+        TwitterButton.shadowOpacity = 1
+        return TwitterButton
+    }()
+    
+    lazy var FacebookButton: LGButton = {
+        let FacebookButton = LGButton()
+        let FacebookImage = UIImage(named: "facebook")
+        FacebookButton.translatesAutoresizingMaskIntoConstraints = false
+        FacebookButton.rightImageSrc = FacebookImage
+        FacebookButton.rightIconColor = .orange
+        FacebookButton.fullyRoundedCorners = true
+        FacebookButton.rightImageHeight = 100
+        FacebookButton.rightImageWidth = 100
+        FacebookButton.bgColor = .white
+        FacebookButton.rightImageColor = .orange
+        FacebookButton.shadowRadius = 5
+        FacebookButton.shadowColor = .systemOrange
+        FacebookButton.shadowOpacity = 1
+        return FacebookButton
+    }()
+    
+    lazy var ExistingAccount: UILabel = {
+        let ExistingAccount = UILabel()
+        ExistingAccount.translatesAutoresizingMaskIntoConstraints = false
+        ExistingAccount.text = "Não tem conta ? Cadastre-se"
+        ExistingAccount.textColor = .orange
+        ExistingAccount.textAlignment = .center
+   //     ExistingAccount.frame = CGRect(x: 50, y: 300, width: 100, height: 100)
+        return ExistingAccount
     }()
     
     
@@ -115,6 +161,9 @@ class ViewController: UIViewController {
         view.addSubview(LogginButton)
         view.addSubview(OrLabel)
         view.addSubview(GoogleButton)
+        view.addSubview(TwitterButton)
+        view.addSubview(FacebookButton)
+        view.addSubview(ExistingAccount)
         setupLayout()
     }
     
@@ -127,20 +176,27 @@ class ViewController: UIViewController {
         topimageContainerView.translatesAutoresizingMaskIntoConstraints = false
         
         // Constrains: ImageView
-        imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: -400).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+//        imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: -400).isActive = true
+//        imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
+//        imageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+//        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+  
         imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 220).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 220).isActive = true
+            
+        WelcomeText.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
+        WelcomeText.centerYAnchor.constraint(equalTo: imageView.centerYAnchor, constant: 90 ).isActive = true
         
-        //
-   //     WelcomeText.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 0).isActive  = true
-    //    WelcomeText.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-      //  WelcomeText.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        // WelcomeText.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         
-        WelcomeText.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -450).isActive = true
-        WelcomeText.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        WelcomeText.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -450).isActive = true
+        
+//        WelcomeText.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -450).isActive = true
+//        WelcomeText.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        WelcomeText.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -450).isActive = true
+//        WelcomeText.centerYAnchor.constraint(equalTo: imageView.centerYAnchor, constant: 80).isActive = true
+
+       
         
         MailField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -70).isActive = true
         MailField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -160,8 +216,25 @@ class ViewController: UIViewController {
   //      OrLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
   //      OrLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
+        TwitterButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 180).isActive = true
+        TwitterButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        TwitterButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        TwitterButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
+        GoogleButton.centerYAnchor.constraint(equalTo: TwitterButton.centerYAnchor).isActive = true
+        GoogleButton.centerXAnchor.constraint(equalTo: TwitterButton.centerXAnchor, constant: -70).isActive = true
+        GoogleButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        GoogleButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
+        FacebookButton.centerXAnchor.constraint(equalTo: TwitterButton.centerXAnchor,constant: 70).isActive = true
+        FacebookButton.centerYAnchor.constraint(equalTo: TwitterButton.centerYAnchor).isActive = true
+        FacebookButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        FacebookButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        ExistingAccount.centerYAnchor.constraint(equalTo: TwitterButton.centerYAnchor, constant: 125).isActive = true
+        ExistingAccount.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        ExistingAccount.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        ExistingAccount.heightAnchor.constraint(equalToConstant: 300).isActive = true
     }
 }
 
