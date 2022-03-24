@@ -9,8 +9,9 @@ import UIKit
 import SkyFloatingLabelTextField
 import LGButton
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
+    
     lazy var imageView: UIImageView = {
         let image = UIImage(named: "Piano")
         let imageView = UIImageView(image: image)
@@ -21,9 +22,9 @@ class ViewController: UIViewController {
 
     lazy var WelcomeText: UILabel = {
         let textfield = UILabel()
-        textfield.text = "Sign In"
+        textfield.text = "Entre"
         textfield.translatesAutoresizingMaskIntoConstraints = false
-        textfield.font = UIFont.boldSystemFont(ofSize: 30)
+        textfield.font = UIFont.boldSystemFont(ofSize: 35)
         textfield.textAlignment = .center
         return textfield
     }()
@@ -53,6 +54,7 @@ class ViewController: UIViewController {
         password.translatesAutoresizingMaskIntoConstraints = false
         password.selectedIconColor = .orange
         password.selectedLineColor = .orange
+        password.isSecureTextEntry = true
         password.placeholder = "Senha"
         password.iconImage = passwordimage
         password.iconMarginBottom = 1
@@ -78,7 +80,7 @@ class ViewController: UIViewController {
     
     lazy var OrLabel: UILabel = {
         let or = UILabel()
-        or.text = "or"
+        or.text = "ou"
         or.translatesAutoresizingMaskIntoConstraints = false
         or.textAlignment = .center
         or.textColor = .gray
@@ -90,7 +92,6 @@ class ViewController: UIViewController {
         let GoogleImage = UIImage(named: "google")
         GoogleButton.translatesAutoresizingMaskIntoConstraints = false
         GoogleButton.rightImageSrc = GoogleImage
-        
         GoogleButton.rightIconColor = .orange
         GoogleButton.fullyRoundedCorners = true
         GoogleButton.rightImageHeight = 30
@@ -143,7 +144,6 @@ class ViewController: UIViewController {
         ExistingAccount.text = "Não tem conta ? Cadastre-se"
         ExistingAccount.textColor = .orange
         ExistingAccount.textAlignment = .center
-   //     ExistingAccount.frame = CGRect(x: 50, y: 300, width: 100, height: 100)
         return ExistingAccount
     }()
     
@@ -164,6 +164,7 @@ class ViewController: UIViewController {
         view.addSubview(TwitterButton)
         view.addSubview(FacebookButton)
         view.addSubview(ExistingAccount)
+        
         setupLayout()
     }
     
@@ -175,28 +176,14 @@ class ViewController: UIViewController {
         topimageContainerView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         topimageContainerView.translatesAutoresizingMaskIntoConstraints = false
         
-        // Constrains: ImageView
-//        imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: -400).isActive = true
-//        imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
-//        imageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
-//        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-  
         imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: 220).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 220).isActive = true
             
         WelcomeText.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
-        WelcomeText.centerYAnchor.constraint(equalTo: imageView.centerYAnchor, constant: 90 ).isActive = true
+        WelcomeText.centerYAnchor.constraint(equalTo: imageView.centerYAnchor, constant: 95 ).isActive = true
         
-        
-        
-//        WelcomeText.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -450).isActive = true
-//        WelcomeText.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        WelcomeText.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -450).isActive = true
-//        WelcomeText.centerYAnchor.constraint(equalTo: imageView.centerYAnchor, constant: 80).isActive = true
-
-       
         
         MailField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -70).isActive = true
         MailField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -213,10 +200,8 @@ class ViewController: UIViewController {
         
         OrLabel.centerXAnchor.constraint(equalTo: LogginButton.centerXAnchor).isActive = true
         OrLabel.centerYAnchor.constraint(equalTo: LogginButton.centerYAnchor, constant: 55).isActive = true
-  //      OrLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
-  //      OrLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        TwitterButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 180).isActive = true
+        TwitterButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 185).isActive = true
         TwitterButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         TwitterButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         TwitterButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -236,5 +221,5 @@ class ViewController: UIViewController {
         ExistingAccount.widthAnchor.constraint(equalToConstant: 300).isActive = true
         ExistingAccount.heightAnchor.constraint(equalToConstant: 300).isActive = true
     }
+    
 }
-
