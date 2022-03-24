@@ -2,7 +2,7 @@
   Programmatically-UI
 </h1>   
 
-<p align="center"> This is a respository that i made for learning how to do UI programmatically
+<p align="center"> This is a repository that i made for store my learning of how to do UI Programmatically
   
   <p align="center">
   <a href="#Images">Images</a> •
@@ -29,6 +29,8 @@ Introducing Auto Layout: https://www.youtube.com/watch?v=9RydRg0ZKaI
 Auto Layout Constrains Programmatically: https://www.youtube.com/watch?v=HuCx6dGaY1g
 
 UIKit Catalog Apple: https://developer.apple.com/documentation/uikit/mac_catalyst/uikit_catalog_creating_and_customizing_views_and_controls
+
+Programming Constraints: https://dev.to/andrewlawlerdev/programmatic-constraints-in-swift-kj
   
 ---
 ### Autor 
@@ -41,8 +43,3 @@ UIKit Catalog Apple: https://developer.apple.com/documentation/uikit/mac_catalys
  <a href="https://www.linkedin.com/in/henrique-marques-5553581b5/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
  
   
-  
-  
-  
-  ---
-<p align="center">  PS: I know that i used comments a lot in this project, but please this it just for learning causes :)
