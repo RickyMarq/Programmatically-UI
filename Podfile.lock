@@ -1,0 +1,20 @@
+PODS:
+  - LGButton (1.1.6)
+  - SkyFloatingLabelTextField (3.8.0)
+
+DEPENDENCIES:
+  - LGButton
+  - SkyFloatingLabelTextField (~> 3.0)
+
+SPEC REPOS:
+  trunk:
+    - LGButton
+    - SkyFloatingLabelTextField
+
+SPEC CHECKSUMS:
+  LGButton: 9f0a7f9d3030e3f504108342f6b66d64a429371b
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
+
+PODFILE CHECKSUM: 03443a4c336cda87c69c417a54cb1dc12d6692f3
+
+COCOAPODS: 1.11.2
