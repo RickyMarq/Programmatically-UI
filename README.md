@@ -32,6 +32,8 @@ Auto Layout Constrains Programmatically: https://www.youtube.com/watch?v=HuCx6dG
 UIKit Catalog Apple: https://developer.apple.com/documentation/uikit/mac_catalyst/uikit_catalog_creating_and_customizing_views_and_controls
 
 Programming Constraints: https://dev.to/andrewlawlerdev/programmatic-constraints-in-swift-kj
+
+  Lazy Var or Let to make UI ?: https://stackoverflow.com/questions/47367454/swift-lazy-var-vs-let-when-creating-views-programmatically-saving-memory#:~:text=Another%20advantage%20to%20using%20a,%2C%20setup%20function%2C%20or%20viewDidLoad%20.
   
 ---
 ### Autor 
