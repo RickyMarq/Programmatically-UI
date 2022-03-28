@@ -10,7 +10,6 @@ import SkyFloatingLabelTextField
 import LGButton
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
     
     lazy var imageView: UIImageView = {
         let image = UIImage(named: "Piano")
@@ -216,7 +215,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         FacebookButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         FacebookButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        ExistingAccount.centerYAnchor.constraint(equalTo: TwitterButton.centerYAnchor, constant: 125).isActive = true
+        ExistingAccount.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 100).isActive = true
+        //ExistingAccount.centerYAnchor.constraint(equalTo: TwitterButton.centerYAnchor, constant: 125).isActive = true
         ExistingAccount.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         ExistingAccount.widthAnchor.constraint(equalToConstant: 300).isActive = true
         ExistingAccount.heightAnchor.constraint(equalToConstant: 300).isActive = true

@@ -63,7 +63,7 @@
 		1DE7AB9E27E55233008EB175 /* Programmatically UI */ = {
 			isa = PBXGroup;
 			children = (
-				1DE7ABB327E7F377008EB175 /* Pickers */,
+				1DE7ABB327E7F377008EB175 /* scr */,
 				1DE7AB9F27E55233008EB175 /* AppDelegate.swift */,
 				1DE7ABA127E55233008EB175 /* SceneDelegate.swift */,
 				1DE7ABA327E55233008EB175 /* ViewController.swift */,
@@ -75,11 +75,11 @@
 			path = "Programmatically UI";
 			sourceTree = "<group>";
 		};
-		1DE7ABB327E7F377008EB175 /* Pickers */ = {
+		1DE7ABB327E7F377008EB175 /* scr */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Pickers;
+			path = scr;
 			sourceTree = "<group>";
 		};
 		C2BED21E34ABBBA262785C1F /* Pods */ = {
