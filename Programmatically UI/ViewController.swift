@@ -175,51 +175,52 @@ class ViewController: UIViewController, UITextFieldDelegate {
         topimageContainerView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         topimageContainerView.translatesAutoresizingMaskIntoConstraints = false
         
-        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 220).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 220).isActive = true
+        
+        let constraints = [
+            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                 imageView.topAnchor.constraint(equalTo: view.topAnchor),
+                 imageView.widthAnchor.constraint(equalToConstant: 220),
+                 imageView.heightAnchor.constraint(equalToConstant: 220),
             
-        WelcomeText.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
-        WelcomeText.centerYAnchor.constraint(equalTo: imageView.centerYAnchor, constant: 95 ).isActive = true
+                 WelcomeText.centerXAnchor.constraint(equalTo: imageView.centerXAnchor),
+                 WelcomeText.centerYAnchor.constraint(equalTo: imageView.centerYAnchor, constant: 95 ),
+                 MailField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -70),
+                 MailField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                 PasswordField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                 PasswordField.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+         
+         
+         
+                 LogginButton.topAnchor.constraint(equalTo: PasswordField.bottomAnchor, constant: 30),
+                 LogginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                 LogginButton.widthAnchor.constraint(equalToConstant: 300),
+                 LogginButton.heightAnchor.constraint(equalToConstant: 50),
+         
+                 OrLabel.centerXAnchor.constraint(equalTo: LogginButton.centerXAnchor),
+                 OrLabel.centerYAnchor.constraint(equalTo: LogginButton.centerYAnchor, constant: 55),
+         
+                 TwitterButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 185),
+                 TwitterButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                 TwitterButton.widthAnchor.constraint(equalToConstant: 50),
+                 TwitterButton.heightAnchor.constraint(equalToConstant: 50),
+         
+                 GoogleButton.centerYAnchor.constraint(equalTo: TwitterButton.centerYAnchor),
+                 GoogleButton.centerXAnchor.constraint(equalTo: TwitterButton.centerXAnchor, constant: -70),
+                 GoogleButton.widthAnchor.constraint(equalToConstant: 50),
+                 GoogleButton.heightAnchor.constraint(equalToConstant: 50),
+         
+                 FacebookButton.centerXAnchor.constraint(equalTo: TwitterButton.centerXAnchor,constant: 70),
+                 FacebookButton.centerYAnchor.constraint(equalTo: TwitterButton.centerYAnchor),
+                 FacebookButton.widthAnchor.constraint(equalToConstant: 50),
+                 FacebookButton.heightAnchor.constraint(equalToConstant: 50),
+         
+                 ExistingAccount.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 100),
+                 //ExistingAccount.centerYAnchor.constraint(equalTo: TwitterButton.centerYAnchor, constant: 125).isActive = true
+                 ExistingAccount.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                 ExistingAccount.widthAnchor.constraint(equalToConstant: 300),
+                 ExistingAccount.heightAnchor.constraint(equalToConstant: 300),
         
-        
-        MailField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -70).isActive = true
-        MailField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
-        PasswordField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        PasswordField.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        
-        
-        
-        LogginButton.topAnchor.constraint(equalTo: PasswordField.bottomAnchor, constant: 30).isActive = true
-        LogginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        LogginButton.widthAnchor.constraint(equalToConstant: 300).isActive = true
-        LogginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
-        OrLabel.centerXAnchor.constraint(equalTo: LogginButton.centerXAnchor).isActive = true
-        OrLabel.centerYAnchor.constraint(equalTo: LogginButton.centerYAnchor, constant: 55).isActive = true
-        
-        TwitterButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 185).isActive = true
-        TwitterButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        TwitterButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        TwitterButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
-        GoogleButton.centerYAnchor.constraint(equalTo: TwitterButton.centerYAnchor).isActive = true
-        GoogleButton.centerXAnchor.constraint(equalTo: TwitterButton.centerXAnchor, constant: -70).isActive = true
-        GoogleButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        GoogleButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
-        FacebookButton.centerXAnchor.constraint(equalTo: TwitterButton.centerXAnchor,constant: 70).isActive = true
-        FacebookButton.centerYAnchor.constraint(equalTo: TwitterButton.centerYAnchor).isActive = true
-        FacebookButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        FacebookButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
-        ExistingAccount.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 100).isActive = true
-        //ExistingAccount.centerYAnchor.constraint(equalTo: TwitterButton.centerYAnchor, constant: 125).isActive = true
-        ExistingAccount.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        ExistingAccount.widthAnchor.constraint(equalToConstant: 300).isActive = true
-        ExistingAccount.heightAnchor.constraint(equalToConstant: 300).isActive = true
-    }
-    
+        ]
+        NSLayoutConstraint.activate(constraints)
+  }
 }
