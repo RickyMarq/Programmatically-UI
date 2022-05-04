@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1D5A18A027EBD10D00BD6E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D5A189F27EBD10D00BD6E86 /* Assets.xcassets */; };
+		1D8D23742813037900478A03 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D8D23732813037900478A03 /* GoogleService-Info.plist */; };
+		1D9A7FE52813011700332E96 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A7FE42813011700332E96 /* SignUpViewController.swift */; };
+		1D9A7FE72813031000332E96 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A7FE62813031000332E96 /* SignUpViewController.swift */; };
 		1DE7ABA027E55233008EB175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7AB9F27E55233008EB175 /* AppDelegate.swift */; };
 		1DE7ABA227E55233008EB175 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7ABA127E55233008EB175 /* SceneDelegate.swift */; };
 		1DE7ABA427E55233008EB175 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7ABA327E55233008EB175 /* ViewController.swift */; };
@@ -19,6 +22,9 @@
 /* Begin PBXFileReference section */
 		0AB96598BD05468D4A3893A0 /* Pods_Programmatically_UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Programmatically_UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D5A189F27EBD10D00BD6E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D8D23732813037900478A03 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1D9A7FE42813011700332E96 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = "/Users/rick/Desktop/Developer/Programmatically UI/Programmatically UI/SignUpViewController.swift"; sourceTree = "<absolute>"; };
+		1D9A7FE62813031000332E96 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1DE7AB9C27E55233008EB175 /* Programmatically UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Programmatically UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE7AB9F27E55233008EB175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DE7ABA127E55233008EB175 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +48,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D85E7532813471200CBFD2C /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				1D9A7FE42813011700332E96 /* SignUpViewController.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		1D85E7542813472F00CBFD2C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DE7AB9F27E55233008EB175 /* AppDelegate.swift */,
+				1DE7ABA127E55233008EB175 /* SceneDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D85E7552813475000CBFD2C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DE7ABA327E55233008EB175 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1D85E7562813475900CBFD2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D9A7FE62813031000332E96 /* SignUpViewController.swift */,
+				1DE7ABA527E55233008EB175 /* Main.storyboard */,
+				1DE7ABAA27E55236008EB175 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1DE7AB9327E55233008EB175 = {
 			isa = PBXGroup;
 			children = (
@@ -49,6 +90,7 @@
 				1DE7AB9D27E55233008EB175 /* Products */,
 				C2BED21E34ABBBA262785C1F /* Pods */,
 				DD6D9DC2F588442BE6277C38 /* Frameworks */,
+				1D85E7532813471200CBFD2C /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,23 +105,14 @@
 		1DE7AB9E27E55233008EB175 /* Programmatically UI */ = {
 			isa = PBXGroup;
 			children = (
-				1DE7ABB327E7F377008EB175 /* scr */,
-				1DE7AB9F27E55233008EB175 /* AppDelegate.swift */,
-				1DE7ABA127E55233008EB175 /* SceneDelegate.swift */,
-				1DE7ABA327E55233008EB175 /* ViewController.swift */,
-				1DE7ABA527E55233008EB175 /* Main.storyboard */,
+				1D85E7562813475900CBFD2C /* View */,
+				1D85E7552813475000CBFD2C /* Controller */,
+				1D85E7542813472F00CBFD2C /* Model */,
 				1D5A189F27EBD10D00BD6E86 /* Assets.xcassets */,
-				1DE7ABAA27E55236008EB175 /* LaunchScreen.storyboard */,
 				1DE7ABAD27E55236008EB175 /* Info.plist */,
+				1D8D23732813037900478A03 /* GoogleService-Info.plist */,
 			);
 			path = "Programmatically UI";
-			sourceTree = "<group>";
-		};
-		1DE7ABB327E7F377008EB175 /* scr */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = scr;
 			sourceTree = "<group>";
 		};
 		C2BED21E34ABBBA262785C1F /* Pods */ = {
@@ -164,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DE7ABAC27E55236008EB175 /* LaunchScreen.storyboard in Resources */,
+				1D8D23742813037900478A03 /* GoogleService-Info.plist in Resources */,
 				1D5A18A027EBD10D00BD6E86 /* Assets.xcassets in Resources */,
 				1DE7ABA727E55233008EB175 /* Main.storyboard in Resources */,
 			);
@@ -220,7 +254,9 @@
 			files = (
 				1DE7ABA427E55233008EB175 /* ViewController.swift in Sources */,
 				1DE7ABA027E55233008EB175 /* AppDelegate.swift in Sources */,
+				1D9A7FE52813011700332E96 /* SignUpViewController.swift in Sources */,
 				1DE7ABA227E55233008EB175 /* SceneDelegate.swift in Sources */,
+				1D9A7FE72813031000332E96 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

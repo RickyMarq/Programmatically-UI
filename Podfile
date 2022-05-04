@@ -6,6 +6,7 @@ target 'Programmatically UI' do
   use_frameworks!
   pod 'SkyFloatingLabelTextField', '~> 3.0'
   pod 'LGButton'
+  pod 'Firebase/Auth'
   # Pods for Programmatically UI
 
 end
