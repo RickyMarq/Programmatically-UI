@@ -18,6 +18,7 @@
 <h1 align="center">
   <img alt="png" src="./Github/github1.PNG" height="500"/>
   <img alt="gif" src="./Github/git.gif" height="500"/>
+  <img alt="jpeg" src="./Github/github2.jpeg" height="500"/>
 
 ### Links 
 
