@@ -1,17 +1,8 @@
-//
-//  ViewController.swift
-//  Programmatically UI
-//
-//  Created by Henrique Marques on 18/03/22.
-//
-
 import UIKit
 import SkyFloatingLabelTextField
 import LGButton
 import FirebaseAuth
 import Firebase
-
-// TODO:
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
